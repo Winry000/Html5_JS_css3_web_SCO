@@ -4,46 +4,27 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width">
    <title>login page</title>
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
+
 <div class="login-form">
    <h3>User Login</h3>
-   <form name="login" action="index_submit" method="get" accept-charset="utf-8" onsubmit="getinfo()">
+   <form id="form_id" method="post" name="login">
       <ul>
          <li>
-            <label for="Usermail">Username</label>
-            <input type="username" name="username" placeholder="username" required>
+            <label>Username</label>
+            <input type="text" name="username" id="username" placeholder="username" required>
          </li>
          <li>
-            <label for="password">Password</label>
-            <input type="password" name="password" placeholder="password" required>
+            <label>Password</label>
+            <input type="password" name="password" id="password" placeholder="password" required>
          </li>
       </ul>
       <div class="login-action">
-         <span>
-            <a href="">Create Account/Forgot?</a>
-         </span>
-          <input class="login" type="submit" value="Login" onclick="getinfo()">
+         <span><a href="">Create Account/Forgot?</a></span>
+         <input type="button" value="Login" onclick="validate()"/>
       </div>
    </form>
-</div>
-<script>
-      var objPeople = [
-         {
-               username:"winry",
-               password:"1234"
-         }
-      ]
-      function getinfo() {
-         var username = document.getElementById("username").value
-         var password = document.getElementById("password").value
-         if (username == objPeople[0].username && password == objPeople[0].password) {
-               window.open = "/Users/winryxie/Desktop/280SCO%20/question1.html"
-            } else {
-               alert("Username or Password error")
-            }
-      }
-</script>
+   <script src="js/main.js"></script>
 </body>
 </html>

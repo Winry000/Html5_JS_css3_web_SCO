@@ -16,16 +16,16 @@
          <div class="col-sm-6">
            <h4>Watch the video and answer the following question. What is the source as mentioned in the video?</h4>
              <label>
-               <input type = "radio" name="A" value="m">NASA.Gov
+               <input type = "radio" id="myradioa" name="one">NASA.Gov
              </label>
              <label >
-               <input type = "radio" name="B" value="f">Data.Gov
+               <input type = "radio" id="myradiob" name="one">Data.Gov
              </label><br>
              <label>
-               <input type = "radio" name="C" value="m">Facebook
+               <input type = "radio" id="myradioc" name="one">Facebook
              </label>
              <label>
-               <input type = "radio" name="D" value="f">XYZ.net
+               <input type = "radio" id="myradiod" name="one">XYZ.net
              </label><br>
         </div>
           <!-- Right Column -->
@@ -36,10 +36,11 @@
           </div> 
     </div>
          <div class = "button">
-           <button name="submit" value="OK" type="button" onclick="javascript:location='/Users/winryxie/Desktop/280SCO%20/survey.html'">Submit and Next Question</button>
-           <button name="clear" value="OK" type="button">Cancel and Clear Selection</button>
+           <button name="submit" value="OK" type="button" onclick="Question4()">Submit and Next Question</button>
+           <button name="clear" value="OK" type="button" onclick="remove()">Cancel and Clear Selection</button>
          </div>
 </div>
 </div>
+<script type="text/javascript" src="js/q4.js"></script>
 </body>
 </html>

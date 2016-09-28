@@ -6,6 +6,8 @@
    <title>Question3</title>
    <link rel="stylesheet" href="css/style1.css">
    <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+   <script type="text/javascript" src="js/q3.js"></script>
 </head>
 <body>
 <div class="q1-form">
@@ -15,36 +17,58 @@
           <!-- Left Column -->
          <div class="col-sm-7">
              <h4>As per the lastest twitter news, complete the article snippet given by selecting appropriate choices for the blanks.</h4>
+             <form>
                <label>
-                 <input type = "radio" name="A" value="m">Option 1 Mark 1:$650
+                 <input type = "radio" id="myradioa" name="one" value="650">Option 1 Mark 1:$650
                </label>
                <label >
-                 <input type = "radio" name="B" value="f">Option 1 Mark 2:Twitter
+                 <input type = "radio" id="myradiob" name="two" value="Twitter">Option 1 Mark 2:Twitter
                </label><br>
                <label>
-                 <input type = "radio" name="C" value="m">Option 2 Mark 1:$550 
+                 <input type = "radio" id="myradioc" name="one" value="550">Option 2 Mark 1:$550 
                </label>
                <label>
-                 <input type = "radio" name="D" value="f">Option 1 Mark 2:Google
+                 <input type = "radio" id="myradiod" name="two" value="Google">Option 1 Mark 2:Google
                </label><br>
                <label>
-                 <input type = "radio" name="E" value="m">Option 3 Mark 1:$650
+                 <input type = "radio" id="myradioe" name="one" value="650">Option 3 Mark 1:$650
                </label>
                <label>
-                 <input type = "radio" name="F" value="f">Option 1 Mark 2:Facebook
+                 <input type = "radio" id="myradiof" name="two" value="Facebook">Option 1 Mark 2:Facebook
                </label><br>
+               </form>
         </div>
        <!-- Right Column -->
         <div class="col-sm-5">
-             <h5>Twitter wants more cash. The company announced two $____ million debt offering in a filing today, each with a potential $100 increase provided that the sales are oversubscribed. Assuming full tip, including the $100 million boosters, _____will raise up $1.5 billion with the two offerings.</h5><br><br>
+             <h5>Twitter wants more cash. The company announced two $ ___<text id="log1"></text>__ million debt offering in a filing today, each with a potential $100 increase provided that the sales are oversubscribed. Assuming full tip, including the $100 million boosters, ___<text id="log2"></text>___will raise up $1.5 billion with the two offerings.</h5><br><br>
              <h5>Source:http://techcruch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/</h5>
         </div> 
     </div>
          <div class = "button">
-           <button name="submit" value="OK" type="button" onclick="javascript:location='/Users/winryxie/Desktop/280SCO%20/question4.html'">Submit and Next Question</button>
-           <button name="clear" value="OK" type="button">Cancel and Clear Selection</button>
+           <button name="submit" value="OK" type="button" onclick="Question3()">Submit and Next Question</button>
+           <button name="clear" value="OK" type="button" onclick="remove()">Cancel and Clear Selection</button>
          </div>
   </div>
 </div>
+<script>
+  $( "#myradioa" ).on( "click", function() {
+  $( "#log1" ).html( $( "#myradioa:checked" ).val());
+  });
+  $( "#myradiob" ).on( "click", function() {
+  $( "#log2" ).html( $( "#myradiob:checked" ).val());
+  });
+  $( "#myradioc" ).on( "click", function() {
+  $( "#log1" ).html( $( "#myradioc:checked" ).val());
+  });
+  $( "#myradiod" ).on( "click", function() {
+  $( "#log2" ).html( $( "#myradiod:checked" ).val());
+  });
+  $( "#myradioe" ).on( "click", function() {
+  $( "#log1" ).html( $( "#myradioe:checked" ).val());
+  });
+  $( "#myradiof" ).on( "click", function() {
+  $( "#log2" ).html( $( "#myradiof:checked" ).val());
+  });
+</script>
 </body>
 </html>
